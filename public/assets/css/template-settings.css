@@ -1,0 +1,101 @@
+/* ==== 
+ --------- template settings styles start ---------
+ ==== */
+.color-palate {
+  position: relative;
+}
+.color-palate .color-palate-inner {
+  position: fixed;
+  right: -252px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  width: 250px;
+  background-color: #000000;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0px 0px 2px #c6e757;
+  transition: all 0.3s ease;
+}
+.color-palate .color-icon {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+.color-palate .color-icon button {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  background-color: var(--octonary-color);
+  color: #000000;
+}
+.color-palate .color-icon .close-color {
+  display: none;
+}
+.color-palate .color-icon i {
+  margin-top: 0px !important;
+}
+.color-palate .open-color i {
+  animation: rotation 5s infinite linear;
+}
+.color-palate h6 {
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.color-palate ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.color-palate ul li {
+  cursor: pointer;
+  padding: 12px 0px;
+  background-color: #fff0dc;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: calc(50% - 8px);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.color-palate ul li:hover {
+  background-color: var(--octonary-color);
+  color: #000000;
+}
+.color-palate ul .active {
+  background-color: var(--octonary-color);
+}
+.color-palate ul .active:hover {
+  background-color: var(--octonary-color);
+}
+.color-palate .group {
+  margin-bottom: 40px;
+}
+.color-palate .group:nth-last-of-type(1) {
+  margin-bottom: 0px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* ==== 
+ --------- template settings styles end ---------
+ ==== */

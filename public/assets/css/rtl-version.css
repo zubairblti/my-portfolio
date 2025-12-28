@@ -1,0 +1,97 @@
+/* ==== 
+ --------- rtl version styles start ---------
+ ==== */
+.rtl {
+  direction: rtl;
+}
+.rtl .mobile-menu,
+.rtl .mobile-menu__backdrop {
+  direction: ltr;
+}
+.rtl .color-palate .color-palate-inner {
+  direction: ltr;
+}
+.rtl .btn-primary {
+  flex-direction: row-reverse;
+}
+.rtl .pulse-text,
+.rtl .pulse-text-light {
+  direction: ltr;
+}
+.rtl .banner .title-animation {
+  text-align: center;
+}
+.rtl .section__header.text-center .title-animation {
+  text-align: center;
+}
+.rtl .text-center .title-animation {
+  text-align: center;
+}
+.rtl .footer__copyright p {
+  direction: ltr;
+}
+.rtl .title-animation {
+  direction: ltr;
+  text-align: end;
+}
+.rtl .swiper {
+  direction: ltr;
+}
+.rtl .swiper-rtl {
+  direction: rtl;
+}
+.rtl .slider-navigation {
+  direction: ltr;
+}
+.rtl .progress-wrap {
+  direction: ltr;
+}
+.rtl .accordion-button::after {
+  margin-left: unset;
+  margin-inline-start: auto;
+}
+.rtl .hero .hero__thumb {
+  left: 55%;
+  transform: translateX(-45%);
+}
+.rtl .hero .hero__thumb span {
+  transform: translateX(50%) rotate(39.28deg) !important;
+  scale: -1 1 !important;
+}
+.rtl .hero-four .hero-four-bg img {
+  scale: -1 1 !important;
+}
+.rtl .about .about__counter {
+  text-align: start;
+}
+.rtl .portfolio-four {
+  direction: ltr;
+}
+.rtl .portfolio-four .title-animation {
+  direction: ltr;
+  text-align: start;
+}
+.rtl .blog-three h5 a {
+  direction: ltr;
+  text-align: center;
+}
+.rtl .appointment .bg-img img,
+.rtl .testimonial-four .bg-img img {
+  scale: -1 1 !important;
+}
+.rtl .footer__copyright .footer__copyright-left,
+.rtl .footer__copyright .footer__copyright-right {
+  text-align: center;
+}
+@media only screen and (min-width: 992px) {
+  .rtl .footer__copyright .footer__copyright-left {
+    text-align: end;
+  }
+  .rtl .footer__copyright .footer__copyright-right {
+    text-align: start;
+  }
+}
+
+/* ==== 
+ --------- rtl version styles end ---------
+ ==== */
