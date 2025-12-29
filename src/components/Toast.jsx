@@ -21,7 +21,7 @@ const Toast = ({ message, type, onClose }) => {
         backgroundColor: type === 'success' ? '#10b981' : '#ef4444',
         color: '#ffffff',
         boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-        zIndex: 9999,
+        zIndex: 99999,
         minWidth: '300px',
         maxWidth: '400px',
         animation: 'slideInRight 0.3s ease-out',

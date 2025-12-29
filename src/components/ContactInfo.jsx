@@ -17,7 +17,7 @@ const ContactInfo = () => {
 
   // EmailJS Configuration - Replace these with your actual values
   const EMAILJS_SERVICE_ID = 'service_86bvh2l';
-  const EMAILJS_TEMPLATE_ID = 'template_chct6w8';
+  const EMAILJS_TEMPLATE_ID = 'template_iojyaoh';
   const EMAILJS_PUBLIC_KEY = 'qMCm4l3_9uBXaoPjo';
 
   useEffect(() => {
@@ -33,19 +33,33 @@ const ContactInfo = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault();    
+    // Validate form data
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.number || !formData.service || !formData.message) {
+      setToast({
+        type: 'error',
+        message: 'Please fill in all required fields.'
+      });
+      return;
+    }
+
     setLoading(true);
 
     try {
       // Prepare template parameters - adjust field names according to your EmailJS template
+      const currentDate = new Date().toLocaleString();
+      
       const templateParams = {
         from_name: `${formData.firstname} ${formData.lastname}`,
         from_email: formData.email,
         phone: formData.number,
+        phone_number: formData.number,
         service: formData.service,
         message: formData.message,
         firstname: formData.firstname,
-        lastname: formData.lastname
+        lastname: formData.lastname,
+        date: currentDate,
+        time: currentDate
       };
 
       // Send email using EmailJS
@@ -56,7 +70,7 @@ const ContactInfo = () => {
         EMAILJS_PUBLIC_KEY
       );
 
-      if (response.status === 200) {
+      if (response.status === 200 || response.text === 'OK') {
         setToast({
           type: 'success',
           message: 'Message sent successfully! We will get back to you soon.'
@@ -76,12 +90,25 @@ const ContactInfo = () => {
         if (formRef.current) {
           formRef.current.reset();
         }
+      } else {
+        throw new Error('Unexpected response status');
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('EmailJS Error Details:', error);
+      console.error('Error Code:', error.code);
+      console.error('Error Text:', error.text);
+      
+      let errorMessage = 'Failed to send message. Please try again or contact us directly.';
+      
+      if (error.text) {
+        errorMessage = `Error: ${error.text}`;
+      } else if (error.message) {
+        errorMessage = `Error: ${error.message}`;
+      }
+      
       setToast({
         type: 'error',
-        message: 'Failed to send message. Please try again or contact us directly.'
+        message: errorMessage
       });
     } finally {
       setLoading(false);
@@ -233,6 +260,10 @@ const ContactInfo = () => {
                             title="submit message" 
                             aria-label="submit message"
                             disabled={loading}
+                            onClick={(e) => {
+                              console.log('Button clicked');
+                              // Let form onSubmit handle it
+                            }}
                           >
                             <span className="btn-animated-text" data-text={loading ? "Sending..." : "Send Message"}>
                               {loading ? 'Sending...' : 'Send Message'}
