@@ -52,9 +52,6 @@ const Header = () => {
                           <Link to="/our-projects" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
                         </li>
                         <li className="navbar__item nav-fade">
-                          <a href="#newsSec" onClick={(e) => handleLinkClick(e, '#newsSec')}>News</a>
-                        </li>
-                        <li className="navbar__item nav-fade">
                           <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
                         </li>
                       </ul>
