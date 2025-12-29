@@ -54,18 +54,21 @@ const Header = () => {
                         <li className="navbar__item nav-fade">
                           <a href="#newsSec" onClick={(e) => handleLinkClick(e, '#newsSec')}>News</a>
                         </li>
+                        <li className="navbar__item nav-fade">
+                          <Link to="/contact-us" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+                        </li>
                       </ul>
                     </div>
                   </div>
                   <div className="navbar__options">
                     <div className="navbar__mobile-options d-none d-sm-block">
-                      <a href="#contactSec" className="btn-primary" onClick={(e) => handleLinkClick(e, '#contactSec')}>
+                      <Link to="/contact-us" className="btn-primary">
                         <span className="btn-animated-text" data-text="contact us">Contact Us</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
                         </span>
-                      </a>
+                      </Link>
                     </div>
                     <button
                       className="open-offcanvas-nav d-flex d-xl-none"
@@ -122,16 +125,17 @@ const MobileMenu = ({ isOpen, onClose, handleLinkClick }) => {
               <li><Link to="/our-services" onClick={onClose}>Services</Link></li>
               <li><Link to="/our-projects" onClick={onClose}>Projects</Link></li>
               <li><a href="#newsSec" onClick={(e) => { handleLinkClick(e, '#newsSec'); onClose(); }}>News</a></li>
+              <li><Link to="/contact-us" onClick={onClose}>Contact</Link></li>
             </ul>
           </div>
           <div className="mobile-menu__cta d-block d-md-none nav-fade">
-            <a href="#contactSec" className="btn-primary" onClick={(e) => { handleLinkClick(e, '#contactSec'); onClose(); }}>
+            <Link to="/contact-us" className="btn-primary" onClick={onClose}>
               <span className="btn-animated-text" data-text="contact us">Contact Us</span>
               <span className="btn-icon">
                 <i className="ph ph-arrow-up-right"></i>
                 <i className="ph ph-arrow-up-right"></i>
               </span>
-            </a>
+            </Link>
           </div>
           <div className="mobile-menu__social social nav-fade">
             <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin" title="linkedin">

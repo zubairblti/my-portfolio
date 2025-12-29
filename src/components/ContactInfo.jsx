@@ -73,7 +73,7 @@ const ContactInfo = () => {
                         <div className="input-single">
                           <input
                             type="text"
-                            name="contact-firstname"
+                            name="firstname"
                             id="contactFirstName"
                             placeholder="First Name"
                             required
@@ -82,7 +82,7 @@ const ContactInfo = () => {
                         <div className="input-single">
                           <input
                             type="text"
-                            name="contact-lastname"
+                            name="lastname"
                             id="contactLastName"
                             placeholder="Last Name"
                             required
@@ -93,7 +93,7 @@ const ContactInfo = () => {
                         <div className="input-single">
                           <input
                             type="email"
-                            name="contact-email"
+                            name="email"
                             id="contactEmail"
                             placeholder="Email Address"
                             required
@@ -102,7 +102,7 @@ const ContactInfo = () => {
                         <div className="input-single">
                           <input
                             type="number"
-                            name="contact-number"
+                            name="number"
                             id="contactNumber"
                             placeholder="Phone Number"
                             required
@@ -120,7 +120,7 @@ const ContactInfo = () => {
                       </div>
                       <div className="input-single">
                         <textarea
-                          name="contact-message"
+                          name="message"
                           id="contactMessage"
                           placeholder="Message"
                           required

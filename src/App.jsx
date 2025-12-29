@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/our-services" element={<Services />} />
         <Route path="/our-projects" element={<Projects />} />
+        <Route path="/contact-us" element={<Contact />} />
       </Routes>
     </Router>
   );
