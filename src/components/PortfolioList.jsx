@@ -1,31 +1,39 @@
 import { Link } from 'react-router-dom';
 
-const Portfolio = () => {
-  const portfolios = [
+const PortfolioList = () => {
+  const projects = [
     {
+      id: 1,
       image: 'assets/images/portfolio/two.png',
       title: 'Redefining UX',
-      tag: 'UX/UX Design'
+      category: 'UX/UX Design',
+      link: '/project-details'
     },
     {
+      id: 2,
       image: 'assets/images/portfolio/three.png',
       title: 'Products Expertise',
-      tag: 'UX/UX Design'
+      category: 'UX/UX Design',
+      link: '/project-details'
     },
     {
+      id: 3,
       image: 'assets/images/portfolio/four.png',
       title: 'Brand Identities',
-      tag: 'UX/UX Design'
+      category: 'UX/UX Design',
+      link: '/project-details'
     },
     {
+      id: 4,
       image: 'assets/images/portfolio/five.png',
       title: 'Design Development',
-      tag: 'UX/UX Design'
+      category: 'UX/UX Design',
+      link: '/project-details'
     }
   ];
 
   return (
-    <div className="portfolio-two pt-160 scale-wrapper" id="portfolioSec">
+    <div className="portfolio-two pt-160 pb-160 scale-wrapper">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -56,37 +64,64 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="row gutter-60">
-          {portfolios.map((portfolio, index) => (
-            <div key={index} className="col-12 col-md-6">
+          {projects.map((project) => (
+            <div key={project.id} className="col-12 col-md-6">
               <div className="portfolio-two__single scale-up">
                 <div className="thumb">
-                  <a href="#" className="img-wrap">
-                    <img src={portfolio.image} alt="Image" className="parallax-image" />
-                  </a>
+                  <Link to={project.link} className="img-wrap">
+                    <img src={project.image} alt="Image" className="parallax-image" />
+                  </Link>
                   <div className="btn-wrap">
-                    <a href="#">
+                    <Link to={project.link}>
                       <i className="ph ph-arrow-up-right"></i>
                       View Details
                       <span></span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="content mt-30">
                   <h4>
-                    <a href="#" className="title-animation fw-6">{portfolio.title}</a>
+                    <Link to={project.link} className="title-animation fw-6">{project.title}</Link>
                   </h4>
                   <div className="tags">
-                    <a href="#portfolioSec">{portfolio.tag}</a>
+                    <Link to="/our-projects">{project.category}</Link>
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </div>
+        <div className="row">
+          <div className="col-12">
+            <div className="pagination-wrapper mt-60">
+              <ul className="pagination">
+                <li>
+                  <button>
+                    <i className="ph ph-caret-double-left"></i>
+                  </button>
+                </li>
+                <li>
+                  <Link to="/our-projects">1</Link>
+                </li>
+                <li>
+                  <Link to="/our-projects" className="active">2</Link>
+                </li>
+                <li>
+                  <Link to="/our-projects">3</Link>
+                </li>
+                <li>
+                  <button>
+                    <i className="ph ph-caret-double-right"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Portfolio;
+export default PortfolioList;
 

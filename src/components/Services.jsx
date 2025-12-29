@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Services = () => {
   const services = [
     {
@@ -43,13 +45,13 @@ const Services = () => {
                   <div>
                     <p className="primary-text">Custom web and app development solutions designed for your success.</p>
                     <div className="mt-30">
-                      <a href="#serviceSec" className="btn-primary">
+                      <Link to="/our-services" className="btn-primary">
                         <span className="btn-animated-text" data-text="View More">View More</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

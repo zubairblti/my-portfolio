@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const About = () => {
   return (
     <section className="about pt-160" id="aboutSec">
@@ -44,13 +46,13 @@ const About = () => {
                       Most talented digital with 10+ years of real work experience, everything started with great marketing plan.
                     </p>
                     <div className="about__content-cta mt-40">
-                      <a href="#aboutSec" className="btn-primary">
+                      <Link to="/about-us" className="btn-primary">
                         <span className="btn-animated-text" data-text="About Us">About Us</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
                         </span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

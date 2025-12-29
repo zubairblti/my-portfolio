@@ -39,84 +39,17 @@ const Header = () => {
                   <div className="navbar__menu-wrapper">
                     <div className="navbar__menu d-none d-xl-block">
                       <ul className="navbar__list">
-                        <li className="navbar__item navbar__item--has-children d-none d-xl-block">
-                          <a href="#" aria-label="dropdown menu" className="navbar__dropdown-label dropdown-label-alter">
-                            Home
-                          </a>
-                          <ul className="navbar__sub-menu mega-menu">
-                            <li>
-                              <div className="mega-content-wrapper">
-                                <img src="assets/images/designer.jpg" alt="Image" />
-                                <div className="mega-content">
-                                  <a href="index.html">Multipage</a>
-                                  <a href="index-one-page.html">One Page</a>
-                                </div>
-                              </div>
-                              <a href="index.html">Designer</a>
-                            </li>
-                            <li>
-                              <div className="mega-content-wrapper">
-                                <img src="assets/images/developer.jpg" alt="Image" />
-                                <div className="mega-content">
-                                  <a href="index-two.html">Multipage</a>
-                                  <a href="index-two-one-page.html">One Page</a>
-                                </div>
-                              </div>
-                              <a href="index-two.html">Developer</a>
-                            </li>
-                            <li>
-                              <div className="mega-content-wrapper">
-                                <img src="assets/images/doctor.jpg" alt="Image" />
-                                <div className="mega-content">
-                                  <a href="index-three.html">Multipage</a>
-                                  <a href="index-three-one-page.html">One Page</a>
-                                </div>
-                              </div>
-                              <a href="index-three.html">Doctor</a>
-                            </li>
-                            <li>
-                              <div className="mega-content-wrapper">
-                                <img src="assets/images/photography.jpg" alt="Image" />
-                                <div className="mega-content">
-                                  <a href="index-four.html">Multipage</a>
-                                  <a href="index-four-one-page.html">One Page</a>
-                                </div>
-                              </div>
-                              <a href="index-four.html">Photography</a>
-                            </li>
-                            <li>
-                              <div className="mega-content-wrapper">
-                                <img src="assets/images/lawyer.jpg" alt="Image" />
-                                <div className="mega-content">
-                                  <a href="index-five.html">Multipage</a>
-                                  <a href="index-five-one-page.html">One Page</a>
-                                </div>
-                              </div>
-                              <a href="index-five.html">Lawyer</a>
-                            </li>
-                          </ul>
+                        <li className="navbar__item nav-fade">
+                          <Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link>
                         </li>
                         <li className="navbar__item nav-fade">
                           <Link to="/about-us" onClick={() => setMobileMenuOpen(false)}>About</Link>
                         </li>
-                        <li className="navbar__item navbar__item--has-children nav-fade">
-                          <a href="#" aria-label="dropdown menu" className="navbar__dropdown-label dropdown-label-alter">
-                            Services
-                          </a>
-                          <ul className="navbar__sub-menu">
-                            <li>
-                              <Link to="/our-services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-                            </li>
-                            <li>
-                              <a href="/service-details" onClick={(e) => { e.preventDefault(); setMobileMenuOpen(false); }}>Service Details</a>
-                            </li>
-                          </ul>
+                        <li className="navbar__item nav-fade">
+                          <Link to="/our-services" onClick={() => setMobileMenuOpen(false)}>Services</Link>
                         </li>
                         <li className="navbar__item nav-fade">
-                          <a href="#serviceSec" onClick={(e) => handleLinkClick(e, '#serviceSec')}>Services</a>
-                        </li>
-                        <li className="navbar__item nav-fade">
-                          <a href="#portfolioSec" onClick={(e) => handleLinkClick(e, '#portfolioSec')}>Portfolio</a>
+                          <Link to="/our-projects" onClick={() => setMobileMenuOpen(false)}>Projects</Link>
                         </li>
                         <li className="navbar__item nav-fade">
                           <a href="#newsSec" onClick={(e) => handleLinkClick(e, '#newsSec')}>News</a>
@@ -184,15 +117,10 @@ const MobileMenu = ({ isOpen, onClose, handleLinkClick }) => {
           </div>
           <div className="mobile-menu__list">
             <ul>
+              <li><Link to="/" onClick={onClose}>Home</Link></li>
               <li><Link to="/about-us" onClick={onClose}>About</Link></li>
-              <li>
-                <Link to="/our-services" onClick={onClose}>Services</Link>
-                <ul>
-                  <li><Link to="/our-services" onClick={onClose}>Services</Link></li>
-                  <li><a href="/service-details" onClick={(e) => { e.preventDefault(); onClose(); }}>Service Details</a></li>
-                </ul>
-              </li>
-              <li><a href="#portfolioSec" onClick={(e) => { handleLinkClick(e, '#portfolioSec'); onClose(); }}>Portfolio</a></li>
+              <li><Link to="/our-services" onClick={onClose}>Services</Link></li>
+              <li><Link to="/our-projects" onClick={onClose}>Projects</Link></li>
               <li><a href="#newsSec" onClick={(e) => { handleLinkClick(e, '#newsSec'); onClose(); }}>News</a></li>
             </ul>
           </div>
