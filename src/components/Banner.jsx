@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Banner = ({ title, breadcrumb }) => {
   return (
     <section className="banner">
@@ -17,7 +15,23 @@ const Banner = ({ title, breadcrumb }) => {
                         className={`breadcrumb-item ${item.active ? 'active' : ''}`}
                         aria-current={item.active ? 'page' : undefined}
                       >
-                        {item.link ? <Link to={item.link}>{item.label}</Link> : item.label}
+                        {item.link ? <a href={item.link === '/' ? '#home' : item.link} onClick={(e) => {
+                          if (item.link.startsWith('#')) {
+                            e.preventDefault();
+                            const element = document.querySelector(item.link === '/' ? '#home' : item.link);
+                            if (element) {
+                              if (window.gsap && window.gsap.utils && window.gsap.to) {
+                                window.gsap.to(window, {
+                                  duration: 1,
+                                  scrollTo: { y: element, offsetY: 100 },
+                                  ease: "power2.inOut"
+                                });
+                              } else {
+                                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                              }
+                            }
+                          }
+                        }}>{item.label}</a> : item.label}
                       </li>
                     ))}
                   </ol>

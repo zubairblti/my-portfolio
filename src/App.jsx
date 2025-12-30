@@ -1,10 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
 
 function App() {
   useEffect(() => {
@@ -23,27 +18,12 @@ function App() {
       window.jQuery('.select').niceSelect();
     }
 
-    // Reinitialize when React re-renders
-    const interval = setInterval(() => {
-      if (window.jQuery && window.jQuery().niceSelect) {
-        window.jQuery('.select').niceSelect();
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
+    return () => {
+      // Cleanup if needed
+    };
   }, []);
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/our-services" element={<Services />} />
-        <Route path="/our-projects" element={<Projects />} />
-        <Route path="/contact-us" element={<Contact />} />
-      </Routes>
-    </Router>
-  );
+  return <Home />;
 }
 
 export default App;

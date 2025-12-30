@@ -48,7 +48,7 @@ const Experience = () => {
   ];
 
   return (
-    <section className="experience pt-160 scale-wrapper">
+    <section id="experience" className="experience pt-160 scale-wrapper">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-xl-8">

@@ -49,7 +49,7 @@ const SkillTabs = () => {
   }, [skillTab]);
 
   return (
-    <section className="skill pt-160">
+    <section id="skills" className="skill pt-160">
       <div className="container">
         <div className="row">
           <div className="col-12">

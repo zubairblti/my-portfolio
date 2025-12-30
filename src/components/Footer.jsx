@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   useEffect(() => {
@@ -17,9 +16,23 @@ const Footer = () => {
           <div className="col-12 col-lg-5 col-xl-4">
             <div className="footer-two__intro fade-right">
               <div className="logo">
-                <Link to="/">
+                <a href="#home" onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#home');
+                  if (element) {
+                    if (window.gsap && window.gsap.utils && window.gsap.to) {
+                      window.gsap.to(window, {
+                        duration: 1,
+                        scrollTo: { y: element, offsetY: 100 },
+                        ease: "power2.inOut"
+                      });
+                    } else {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }
+                }}>
                   <img src="assets/images/logo.png" alt="Image" className="logo-ch" />
-                </Link>
+                </a>
               </div>
               <div className="mt-20">
                 <p className="neutral-text text-md">
@@ -31,10 +44,66 @@ const Footer = () => {
           <div className="col-12 col-lg-2 col-xl-3">
               <div className="footer-two__nav fade-right" data-delay="200">
                 <ul>
-                  <li><Link to="/about-us">About</Link></li>
-                  <li><a href="#serviceSec" className="footer-nav-active">Services</a></li>
-                  <li><a href="#portfolioSec">Projects</a></li>
-                  <li><a href="#newsSec">News</a></li>
+                  <li><a href="#about" onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#about');
+                    if (element) {
+                      if (window.gsap && window.gsap.utils && window.gsap.to) {
+                        window.gsap.to(window, {
+                          duration: 1,
+                          scrollTo: { y: element, offsetY: 100 },
+                          ease: "power2.inOut"
+                        });
+                      } else {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}>About</a></li>
+                  <li><a href="#services" className="footer-nav-active" onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#services');
+                    if (element) {
+                      if (window.gsap && window.gsap.utils && window.gsap.to) {
+                        window.gsap.to(window, {
+                          duration: 1,
+                          scrollTo: { y: element, offsetY: 100 },
+                          ease: "power2.inOut"
+                        });
+                      } else {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}>Services</a></li>
+                  <li><a href="#portfolio" onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#portfolio');
+                    if (element) {
+                      if (window.gsap && window.gsap.utils && window.gsap.to) {
+                        window.gsap.to(window, {
+                          duration: 1,
+                          scrollTo: { y: element, offsetY: 100 },
+                          ease: "power2.inOut"
+                        });
+                      } else {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}>Portfolio</a></li>
+                  <li><a href="#pricing" onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#pricing');
+                    if (element) {
+                      if (window.gsap && window.gsap.utils && window.gsap.to) {
+                        window.gsap.to(window, {
+                          duration: 1,
+                          scrollTo: { y: element, offsetY: 100 },
+                          ease: "power2.inOut"
+                        });
+                      } else {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}>Pricing</a></li>
                 </ul>
               </div>
           </div>
@@ -53,7 +122,21 @@ const Footer = () => {
               <div className="footer__copyright-left">
                 <p>
                   <i className="ph ph-copyright"></i> <span id="copyrightYear"></span>{' '}
-                  <Link to="/">XFOLIO</Link>. All rights reserved.
+                  <a href="#home" onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.querySelector('#home');
+                    if (element) {
+                      if (window.gsap && window.gsap.utils && window.gsap.to) {
+                        window.gsap.to(window, {
+                          duration: 1,
+                          scrollTo: { y: element, offsetY: 100 },
+                          ease: "power2.inOut"
+                        });
+                      } else {
+                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }
+                  }}>XFOLIO</a>. All rights reserved.
                 </p>
               </div>
             </div>

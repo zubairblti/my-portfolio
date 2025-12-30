@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 
 const PortfolioList = () => {
   const projects = [
@@ -33,7 +32,7 @@ const PortfolioList = () => {
   ];
 
   return (
-    <div className="portfolio-two pt-160 pb-160 scale-wrapper">
+    <div id="portfolio" className="portfolio-two pt-160 pb-160 scale-wrapper">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -49,13 +48,27 @@ const PortfolioList = () => {
                   <div>
                     <p className="primary-text">Explore creative coding solutions crafted to solve problems efficiently.</p>
                     <div className="mt-30">
-                      <Link to="/our-projects" className="btn-primary">
+                      <a href="#portfolio" className="btn-primary" onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector('#portfolio');
+                        if (element) {
+                          if (window.gsap && window.gsap.utils && window.gsap.to) {
+                            window.gsap.to(window, {
+                              duration: 1,
+                              scrollTo: { y: element, offsetY: 100 },
+                              ease: "power2.inOut"
+                            });
+                          } else {
+                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }
+                      }}>
                         <span className="btn-animated-text" data-text="View More">View More</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
                         </span>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -68,23 +81,23 @@ const PortfolioList = () => {
             <div key={project.id} className="col-12 col-md-6">
               <div className="portfolio-two__single scale-up">
                 <div className="thumb">
-                  <Link to={project.link} className="img-wrap">
+                  <a href="#portfolio" className="img-wrap" onClick={(e) => e.preventDefault()}>
                     <img src={project.image} alt="Image" className="parallax-image" />
-                  </Link>
+                  </a>
                   <div className="btn-wrap">
-                    <Link to={project.link}>
+                    <a href="#portfolio" onClick={(e) => e.preventDefault()}>
                       <i className="ph ph-arrow-up-right"></i>
                       View Details
                       <span></span>
-                    </Link>
+                    </a>
                   </div>
                 </div>
                 <div className="content mt-30">
                   <h4>
-                    <Link to={project.link} className="title-animation fw-6">{project.title}</Link>
+                    <a href="#portfolio" className="title-animation fw-6" onClick={(e) => e.preventDefault()}>{project.title}</a>
                   </h4>
                   <div className="tags">
-                    <Link to="/our-projects">{project.category}</Link>
+                    <a href="#portfolio" onClick={(e) => e.preventDefault()}>{project.category}</a>
                   </div>
                 </div>
               </div>
@@ -101,13 +114,13 @@ const PortfolioList = () => {
                   </button>
                 </li>
                 <li>
-                  <Link to="/our-projects">1</Link>
+                  <a href="#portfolio" onClick={(e) => e.preventDefault()}>1</a>
                 </li>
                 <li>
-                  <Link to="/our-projects" className="active">2</Link>
+                  <a href="#portfolio" className="active" onClick={(e) => e.preventDefault()}>2</a>
                 </li>
                 <li>
-                  <Link to="/our-projects">3</Link>
+                  <a href="#portfolio" onClick={(e) => e.preventDefault()}>3</a>
                 </li>
                 <li>
                   <button>

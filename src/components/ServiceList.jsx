@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const ServiceList = () => {
   const services = [
@@ -70,7 +69,7 @@ const ServiceList = () => {
   }, []);
 
   return (
-    <section className="service pt-160">
+    <section id="services" className="service pt-160">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -86,13 +85,27 @@ const ServiceList = () => {
                   <div>
                     <p className="primary-text">Custom creative solutions designed elevate your brand and identity.</p>
                     <div className="mt-30">
-                      <Link to="/our-services" className="btn-primary">
+                      <a href="#services" className="btn-primary" onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector('#services');
+                        if (element) {
+                          if (window.gsap && window.gsap.utils && window.gsap.to) {
+                            window.gsap.to(window, {
+                              duration: 1,
+                              scrollTo: { y: element, offsetY: 100 },
+                              ease: "power2.inOut"
+                            });
+                          } else {
+                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }
+                      }}>
                         <span className="btn-animated-text" data-text="View More">View More</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
                         </span>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -112,14 +125,14 @@ const ServiceList = () => {
                     </div>
                     <div className="service__content mt-40">
                       <h6 className="fw-6">
-                        <Link to="/service-details">{service.title}</Link>
+                        <a href="#services" onClick={(e) => e.preventDefault()}>{service.title}</a>
                       </h6>
                       <p className="primary-text text-md mt-16">{service.description}</p>
                     </div>
                     <div className="service__cta mt-60">
-                      <Link to="/service-details">
+                      <a href="#services" onClick={(e) => e.preventDefault()}>
                         VIEW DETAILS <img src="assets/images/half-arrow.png" alt="Image" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -131,14 +144,14 @@ const ServiceList = () => {
                   </div>
                   <div className="service__content mt-40">
                     <h6 className="fw-6">
-                      <Link to="/service-details">{service.title}</Link>
+                      <a href="#services" onClick={(e) => e.preventDefault()}>{service.title}</a>
                     </h6>
                     <p className="primary-text text-md mt-16">{service.description}</p>
                   </div>
                   <div className="service__cta mt-60">
-                    <Link to="/service-details">
+                    <a href="#services" onClick={(e) => e.preventDefault()}>
                       VIEW DETAILS <img src="assets/images/half-arrow.png" alt="Image" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               )}
@@ -155,13 +168,13 @@ const ServiceList = () => {
                   </button>
                 </li>
                 <li>
-                  <Link to="/our-services">1</Link>
+                  <a href="#services" onClick={(e) => e.preventDefault()}>1</a>
                 </li>
                 <li>
-                  <Link to="/our-services" className="active">2</Link>
+                  <a href="#services" className="active" onClick={(e) => e.preventDefault()}>2</a>
                 </li>
                 <li>
-                  <Link to="/our-services">3</Link>
+                  <a href="#services" onClick={(e) => e.preventDefault()}>3</a>
                 </li>
                 <li>
                   <button>

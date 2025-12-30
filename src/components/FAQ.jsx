@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const FAQ = () => {
   const faqs = [
     {
@@ -47,7 +45,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="faq pt-160 pb-160">
+    <section id="faq" className="faq pt-160 pb-160">
       <div className="container">
         <div className="row gutter-40">
           <div className="col-12 col-md-6 col-xl-7">
@@ -86,13 +84,27 @@ const FAQ = () => {
                 </div>
               </div>
               <div className="mt-60">
-                <Link to="/contact-us" className="btn-primary">
+                <a href="#contact" className="btn-primary" onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.querySelector('#contact');
+                  if (element) {
+                    if (window.gsap && window.gsap.utils && window.gsap.to) {
+                      window.gsap.to(window, {
+                        duration: 1,
+                        scrollTo: { y: element, offsetY: 100 },
+                        ease: "power2.inOut"
+                      });
+                    } else {
+                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }
+                }}>
                   <span className="btn-animated-text" data-text="Contact Us">Contact Us</span>
                   <span className="btn-icon">
                     <i className="ph ph-arrow-up-right"></i>
                     <i className="ph ph-arrow-up-right"></i>
                   </span>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const PricingFour = () => {
   const [pricingTab, setPricingTab] = useState('hourTwo');
@@ -58,7 +57,7 @@ const PricingFour = () => {
   }, [pricingTab]);
 
   return (
-    <section className="pricing-four pt-160">
+    <section id="pricing" className="pricing-four pt-160">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -122,7 +121,21 @@ const PricingFour = () => {
                             </h2>
                           </div>
                           <div className="pricing-four__cta mt-60">
-                            <Link to="/#contactSec">Get Started Now</Link>
+                            <a href="#contact" onClick={(e) => {
+                              e.preventDefault();
+                              const element = document.querySelector('#contact');
+                              if (element) {
+                                if (window.gsap && window.gsap.utils && window.gsap.to) {
+                                  window.gsap.to(window, {
+                                    duration: 1,
+                                    scrollTo: { y: element, offsetY: 100 },
+                                    ease: "power2.inOut"
+                                  });
+                                } else {
+                                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }
+                            }}>Get Started Now</a>
                           </div>
                           <div className="pricing-four__description mt-60">
                             <ul>
@@ -161,7 +174,21 @@ const PricingFour = () => {
                             </h2>
                           </div>
                           <div className="pricing-four__cta mt-60">
-                            <Link to="/#contactSec">Get Started Now</Link>
+                            <a href="#contact" onClick={(e) => {
+                              e.preventDefault();
+                              const element = document.querySelector('#contact');
+                              if (element) {
+                                if (window.gsap && window.gsap.utils && window.gsap.to) {
+                                  window.gsap.to(window, {
+                                    duration: 1,
+                                    scrollTo: { y: element, offsetY: 100 },
+                                    ease: "power2.inOut"
+                                  });
+                                } else {
+                                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }
+                            }}>Get Started Now</a>
                           </div>
                           <div className="pricing-four__description mt-60">
                             <ul>
