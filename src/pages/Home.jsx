@@ -2,17 +2,19 @@ import { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Marquee from '../components/Marquee';
-import About from '../components/About';
-import Services from '../components/Services';
-import Skills from '../components/Skills';
-import Portfolio from '../components/Portfolio';
-import Pricing from '../components/Pricing';
-import Contact from '../components/Contact';
-import Testimonials from '../components/Testimonials';
-import Blog from '../components/Blog';
+import AboutMe from '../components/AboutMe';
+import ServiceList from '../components/ServiceList';
+import Experience from '../components/Experience';
+import SkillTabs from '../components/SkillTabs';
+import PortfolioList from '../components/PortfolioList';
+import PricingFour from '../components/PricingFour';
+import FAQ from '../components/FAQ';
+import ContactInfo from '../components/ContactInfo';
+// import Testimonials from '../components/Testimonials';
+// import Blog from '../components/Blog';
 import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
-import TemplateOptions from '../components/TemplateOptions';
+// import TemplateOptions from '../components/TemplateOptions';
 import Preloader from '../components/Preloader';
 
 const Home = () => {
@@ -36,19 +38,21 @@ const Home = () => {
         <div id="smooth-content">
           <Hero />
           <Marquee />
-          <About />
-          <Services />
-          <Skills />
-          <Portfolio />
-          <Pricing />
-          <Contact />
-          <Testimonials />
-          <Blog />
+          <AboutMe />
+          <ServiceList />
+          <Experience />
+          <SkillTabs />
+          <PortfolioList />
+          <PricingFour />
+          <FAQ />
+          <ContactInfo />
+          {/* <Testimonials /> */}
+          {/* <Blog /> */}
           <Footer />
         </div>
       </div>
 
-      <TemplateOptions />
+      {/* <TemplateOptions /> */}
       <div className="mouseCursor cursor-outer"></div>
       <div className="mouseCursor cursor-inner"></div>
       <ScrollToTop />
