@@ -38,7 +38,7 @@ const Header = () => {
                 <nav className="navbar p-0">
                   <div className="navbar-logo">
                     <a href="#home" onClick={(e) => handleLinkClick(e, '#home')}>
-                      <img src="assets/images/logo.png" alt="Image" className="logo-ch" />
+                      <img src="assets/images/logo.webp" alt="Image" className="logo-ch" />
                     </a>
                   </div>
                   <div className="navbar__menu-wrapper">
@@ -122,7 +122,7 @@ const MobileMenu = ({ isOpen, onClose, handleLinkClick }) => {
           <div className="mobile-menu__header nav-fade">
             <div className="logo">
               <a href="#home" aria-label="home page" title="logo" onClick={(e) => { handleLinkClick(e, '#home'); onClose(); }}>
-                <img src="assets/images/logo.png" alt="Image" className="logo-ch" />
+                <img src="assets/images/logo.webp" alt="Image" className="logo-ch" />
               </a>
             </div>
             <button aria-label="close mobile menu" className="close-mobile-menu" onClick={onClose}>

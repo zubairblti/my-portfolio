@@ -31,7 +31,7 @@ const Footer = () => {
                     }
                   }
                 }}>
-                  <img src="assets/images/logo.png" alt="Image" className="logo-ch" />
+                  <img src="assets/images/logo.webp" alt="Image" className="logo-ch" />
                 </a>
               </div>
               <div className="mt-20">

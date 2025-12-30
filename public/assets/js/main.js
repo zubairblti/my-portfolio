@@ -1828,7 +1828,7 @@
 
 		$(".dark-mode").on("click", function () {
 			$(".page-wrapper").removeClass("light-mode");
-			$(".logo-ch").attr("src", "assets/images/logo.png");
+			$(".logo-ch").attr("src", "assets/images/logo.webp");
 			$(".pulse-text-light").hide();
 			$(".pulse-text").show();
 		});
