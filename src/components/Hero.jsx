@@ -10,19 +10,19 @@ const Hero = () => {
                   <div className="hero-two__inner">
                     <div className="hero-two__content fade-up">
                       <span className="tertiary-text text-uppercase sub-title fw-3 neutral-top">
-                        HOWDY! <img src="assets/images/hand.png" alt="Image" /> I'M SUBRATA
+                        HELLO! <img src="assets/images/hand.png" alt="Image" /> I'M ZUBAIR
                       </span>
                       <h1 className="title-xl title-animation fw-7 text-uppercase mt-20">
                         Full Stack <span className="secondary-text">Web Developer</span>
                       </h1>
                       <p className="text-xl primary-text mt-20">
-                        I've worked remotely with global teams, consulted with innovative startups, consumer needs.
+                        I build scalable, high-performance web applications using Laravel, WordPress, and modern web technologies.
                       </p>
                       <div className="hero__two-cta mt-40">
-                        <a href="#contactSec" className="btn--secondary" title="hire me" aria-label="hire me">
+                        <a href="#contact" className="btn--secondary" title="hire me" aria-label="hire me">
                           <span className="btn-animated-text" data-text="Hire Me!">Hire Me!</span>
                         </a>
-                        <a href="#aboutSec" className="btn--tertiary" title="download cv" aria-label="download cv">
+                        <a href="/public/Muhammad-Zubair.pdf" target="_blank" className="btn--tertiary" title="download cv" aria-label="download cv">
                           <span className="btn-animated-text" data-text="Download CV">Download CV</span>
                         </a>
                       </div>
@@ -30,13 +30,13 @@ const Hero = () => {
                     <div className="hero-two__group mt-160">
                       <div className="hero-two__left fade-up">
                         <div className="left-thumb">
-                          <a href="#portfolioSec">
+                          <a href="#portfolio">
                             <img src="assets/images/banner/circle.png" alt="Image" />
                           </a>
                         </div>
                         <div className="right-thumb">
                           <div className="btn-wrapper">
-                            <a href="#portfolioSec" className="btn-anim">
+                            <a href="#portfolio" className="btn-anim">
                               <i className="ph ph-arrow-up-right"></i>
                               View Works
                               <span></span>
@@ -44,7 +44,7 @@ const Hero = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="hero-two__right fade-up" data-delay="400">
+                      {/* <div className="hero-two__right fade-up" data-delay="400">
                         <div className="hero-two__group-thumb">
                           <div className="users">
                             <div className="single-user">
@@ -68,7 +68,7 @@ const Hero = () => {
                           </div>
                           <p className="primary-text mt-20">Proud to have supported 20K+ clients.</p>
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
