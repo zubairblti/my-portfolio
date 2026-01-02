@@ -2,51 +2,49 @@ const Experience = () => {
   const experienceData = [
     {
       period: 'Mar, 2025 - Current',
-      company: 'Envato Market',
-      title: 'Lead UX Designer',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      company: 'QuadRoots Technology',
+      title: 'Junior Laravel Developer',
+      description: 'Worked on Laravel-based applications, building backend logic, authentication modules, admin panels, and REST APIs while ensuring performance and code quality.',
       color: 'tertiary-text'
     },
     {
-      period: '2018 - 2022',
-      company: 'Google',
-      title: 'UX Designer',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      period: 'Jan, 2024 - Mar, 2025',
+      company: 'Tower Tech',
+      title: 'Web Master',
+      description: 'Managed and maintained business websites, handled content updates, performance optimization, and collaborated with teams to deliver reliable web solutions.',
       color: 'secondary-text'
     },
     {
-      period: '2015 - 2017',
-      company: 'Apple',
-      title: 'Human Interface Designer',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      period: 'Nov, 2021 - Jan, 2024',
+      company: 'Miracle Soft Solutions',
+      title: 'WordPress Developer',
+      description: 'Developed custom WordPress themes and websites, implemented plugins, optimized performance, and ensured responsive, user-friendly interfaces.',
       color: 'tertiary-text'
     }
   ];
-
   const educationData = [
     {
-      period: '2016-2018',
-      institution: 'Oxford University',
-      title: 'Diploma in Computer',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      period: '2018 - 2021',
+      institution: 'Punjab University',
+      title: 'BSCs Computer Science',
+      description: 'Completed a bachelor’s degree with a strong foundation in programming, databases, software engineering, and modern web technologies.',
       color: 'secondary-text'
     },
     {
-      period: '2018 - 2022',
-      institution: 'Harverd University',
-      title: 'BSc in Engineering',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      period: '2016 - 2018',
+      institution: 'Government College',
+      title: 'Intermediate in Computer Science',
+      description: 'Studied computer fundamentals, mathematics, and core programming concepts with practical academic projects, problem-solving exercises, and foundational software development practices.',
       color: 'tertiary-text'
     },
     {
-      period: '2015 - 2017',
-      institution: 'University of Denmark',
-      title: 'Laravel Development',
-      description: 'I help my clients succeed by creating Web development, digital experiences & communicate clearly.',
+      period: '2014 - 2016',
+      institution: 'Government High School',
+      title: 'Matriculation (Science)',
+      description: 'Completed secondary education with a focus on science subjects, building analytical thinking and problem-solving skills.',
       color: 'secondary-text'
     }
   ];
-
   return (
     <section id="experience" className="experience pt-160 scale-wrapper">
       <div className="container">
@@ -56,9 +54,9 @@ const Experience = () => {
               <span className="sub-title tertiary-text text-uppercase neutral-top fw-6">
                 Education & Experience
               </span>
-              <h2 className="title-animation fw-6 mt-16">Empowering Design with Purpose</h2>
+              <h2 className="title-animation fw-6 mt-16">My Professional Journey</h2>
               <p className="primary-text mt-20">
-                Creating meaningful, user-focused designs that drive engagement, impact, and brand success.
+                Building scalable, secure, and performance-driven web solutions through continuous learning and hands-on experience.
               </p>
             </div>
           </div>
@@ -118,6 +116,4 @@ const Experience = () => {
     </section>
   );
 };
-
 export default Experience;
-
