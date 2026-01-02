@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Toast from './Toast';
 
@@ -14,15 +14,6 @@ const ContactInfo = () => {
   });
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(null);
-
-  // EmailJS Configuration - Replace these with your actual values
-  const EMAILJS_SERVICE_ID = 'service_86bvh2l';
-  const EMAILJS_TEMPLATE_ID = 'template_iojyaoh';
-  const EMAILJS_PUBLIC_KEY = 'qMCm4l3_9uBXaoPjo';
-
-  useEffect(() => {
-    // Nice select initialization removed - using input field instead
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,10 +55,10 @@ const ContactInfo = () => {
 
       // Send email using EmailJS
       const response = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       if (response.status === 200 || response.text === 'OK') {
