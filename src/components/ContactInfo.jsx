@@ -132,8 +132,8 @@ const ContactInfo = () => {
                 <div className="row">
                   <div className="col-12">
                     <div className="section__header text-center mb-60 fade-up">
-                      <span className="sub-title tertiary-text text-uppercase neutral-top fw-6">Contact Us</span>
-                      <h2 className="title-animation fw-6 mt-16">Turn Ideas Into Reality</h2>
+                      <span className="sub-title tertiary-text text-uppercase neutral-top fw-6">Contact Me</span>
+                      <h2 className="title-animation fw-6 mt-16">Let’s Build Something Great</h2>
                     </div>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ const ContactInfo = () => {
                         <div className="content">
                           <h5>Phone</h5>
                           <p>
-                            <a href="tel:239-555-0108-0977">(239) 555-0108-0977</a>
+                            <a href="tel:239-555-0108-0977">0309-9486261</a>
                           </p>
                         </div>
                       </div>
@@ -158,7 +158,7 @@ const ContactInfo = () => {
                         <div className="content">
                           <h5>Email</h5>
                           <p>
-                            <a href="mailto:jennings@example.com">jennings@example.com</a>
+                            <a href="mailto:jennings@example.com">blti42766@gmail.com</a>
                           </p>
                         </div>
                       </div>
@@ -169,12 +169,8 @@ const ContactInfo = () => {
                         <div className="content">
                           <h5>Address</h5>
                           <p>
-                            <a
-                              href="https://maps.app.goo.gl/N9tAtWwQPijVxgr58"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              6391 Elgin St. Celina, Delaware 10299
+                            <a href="https://maps.app.goo.gl/rcCLfQV2Y7adi52C8" target="_blank" rel="noopener noreferrer">
+                              H-171 B-3 Sec D2 Green Town Lahore
                             </a>
                           </p>
                         </div>
