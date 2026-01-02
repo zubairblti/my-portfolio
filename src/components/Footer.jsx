@@ -36,7 +36,7 @@ const Footer = () => {
               </div>
               <div className="mt-20">
                 <p className="neutral-text text-md">
-                  Current enables our entire team to align, share every day. Weekly Drops momentum happening and product scales.
+                  I help businesses and individuals build modern, scalable digital products with a focus on quality, performance, and user experience.
                 </p>
               </div>
             </div>
@@ -122,7 +122,7 @@ const Footer = () => {
               <div className="footer__copyright-left">
                 <p>
                   <i className="ph ph-copyright"></i> <span id="copyrightYear"></span>{' '}
-                  <a href="#home" onClick={(e) => {
+                  <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/" onClick={(e) => {
                     e.preventDefault();
                     const element = document.querySelector('#home');
                     if (element) {
@@ -136,29 +136,29 @@ const Footer = () => {
                         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                       }
                     }
-                  }}>XFOLIO</a>. All rights reserved.
+                  }}>ZUBAIR</a>. All rights reserved.
                 </p>
               </div>
             </div>
             <div className="col-12 col-lg-4">
               <div className="social justify-content-center">
-                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="share us on linkedin" title="linkedin">
+                <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/" target="_blank" rel="noopener noreferrer" aria-label="share us on linkedin" title="linkedin">
                   <i className="fa-brands fa-linkedin"></i>
+                </a>                
+                <a href="https://www.facebook.com/profile.php?id=61565782182572" target="_blank" rel="noopener noreferrer" aria-label="share us on Facebook" title="Facebook">
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" aria-label="share us on dribble" title="dribble">
-                  <i className="fa-solid fa-basketball"></i>
+                <a href="https://www.youtube.com/@zubairblti" target="_blank" rel="noopener noreferrer" aria-label="share us on YouTube" title="YouTube">
+                  <i className="fa-brands fa-youtube"></i>
                 </a>
-                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="share us on twitter" title="twitter">
-                  <i className="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" aria-label="share us on vimeo" title="vimeo">
-                  <i className="fa-brands fa-behance"></i>
+                <a href="https://github.com/zubairblti" target="_blank" rel="noopener noreferrer" aria-label="share us on GitHub" title="GitHub">
+                  <i className="fa-brands fa-github"></i>
                 </a>
               </div>
             </div>
             <div className="col-12 col-lg-4">
               <div className="footer__copyright-right">
-                <p>Designed By <a href="https://themeforest.net/user/wowtheme7">wowtheme7</a></p>
+                <p>Designed By <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/">Zubair Blti</a></p>
               </div>
             </div>
           </div>
