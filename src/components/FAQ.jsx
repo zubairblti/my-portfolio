@@ -4,42 +4,42 @@ const FAQ = () => {
       id: 'collapseOne',
       headingId: 'headingOne',
       question: 'What services do you offer?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      answer: 'I offer WordPress development, Laravel web applications, custom websites, API integration, and ongoing support.',
       show: true
     },
     {
       id: 'collapseTwo',
       headingId: 'headingTwo',
-      question: 'How can I book an appointment?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      question: 'Do you work on project-based or hourly pricing?',
+      answer: 'Most of my work is project-based, but hourly pricing is also available depending on project requirements.',
       show: false
     },
     {
       id: 'collapseThree',
       headingId: 'headingThree',
-      question: 'Do you offer virtual consultations?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      question: 'Can you redesign or fix existing websites?',
+      answer: 'Yes, I can redesign, optimize, or fix bugs in existing WordPress or Laravel websites.',
       show: false
     },
     {
       id: 'collapseFour',
       headingId: 'headingFour',
-      question: 'What should I bring to my appointment?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      question: 'Do you provide website maintenance?',
+      answer: 'Yes, I offer monthly website maintenance, performance optimization, and security updates.',
       show: false
     },
     {
       id: 'collapseFive',
       headingId: 'headingFive',
-      question: 'Do you accept health insurance?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      question: 'How long does a project usually take?',
+      answer: 'Project timelines depend on scope and complexity, but most projects take between 1 to 4 weeks.',
       show: false
     },
     {
       id: 'collapseSix',
       headingId: 'headingSix',
-      question: 'What is your cancellation policy?',
-      answer: 'I provide secure and convenient telemedicine consultations for follow-ups and advice.',
+      question: 'How can I contact you to start a project?',
+      answer: 'You can contact me through the contact form on this website, and I will respond as soon as possible.',
       show: false
     }
   ];
@@ -52,9 +52,9 @@ const FAQ = () => {
             <div className="faq__content fade-up">
               <div className="section__header neutral-top">
                 <span className="sub-title secondary-text text-uppercase fw-6">FAQ</span>
-                <h2 className="title-animation fw-6 mt-16">Questions & Answers</h2>
+                <h2 className="fw-6 mt-16">Frequently Asked Questions</h2>
                 <p className="primary-text text-md mt-16">
-                  Find clear, helpful answers to the most commonly asked questions about our services.
+                  Answers to common questions about my services, process, and pricing.
                 </p>
               </div>
               <div className="testimonial__single mt-40">
@@ -69,7 +69,7 @@ const FAQ = () => {
                 </div>
                 <div className="testimonial__content mt-30">
                   <p className="text-md primary-text">
-                    Current enables our entire team to align, share every day. Weekly Drops momentum happening and product scales.
+                   This approach helped our team stay aligned, collaborate efficiently, and scale the product with confidence.
                   </p>
                 </div>
                 <div className="testimonial__intro mt-30">
@@ -99,7 +99,7 @@ const FAQ = () => {
                     }
                   }
                 }}>
-                  <span className="btn-animated-text" data-text="Contact Us">Contact Us</span>
+                  <span className="btn-animated-text" data-text="Contact Us">Contact Me</span>
                   <span className="btn-icon">
                     <i className="ph ph-arrow-up-right"></i>
                     <i className="ph ph-arrow-up-right"></i>
@@ -114,23 +114,11 @@ const FAQ = () => {
                 {faqs.map((faq) => (
                   <div key={faq.id} className="accordion-item">
                     <h6 className="accordion-header" id={faq.headingId}>
-                      <button
-                        className={`accordion-button ${faq.show ? '' : 'collapsed'}`}
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#${faq.id}`}
-                        aria-expanded={faq.show}
-                        aria-controls={faq.id}
-                      >
+                      <button className={`accordion-button ${faq.show ? '' : 'collapsed'}`} type="button" data-bs-toggle="collapse" data-bs-target={`#${faq.id}`} aria-expanded={faq.show} aria-controls={faq.id}>
                         {faq.question}
                       </button>
                     </h6>
-                    <div
-                      id={faq.id}
-                      className={`accordion-collapse collapse ${faq.show ? 'show' : ''}`}
-                      aria-labelledby={faq.headingId}
-                      data-bs-parent="#accordion"
-                    >
+                    <div id={faq.id} className={`accordion-collapse collapse ${faq.show ? 'show' : ''}`} aria-labelledby={faq.headingId} data-bs-parent="#accordion">
                       <div className="accordion-body">
                         <p className="primary-text">{faq.answer}</p>
                       </div>
@@ -145,6 +133,4 @@ const FAQ = () => {
     </section>
   );
 };
-
 export default FAQ;
-
