@@ -1,1 +1,3 @@
-/* App styles - Main CSS is in assets/css/main.css */
+.skill__tab .thumb img {
+  max-height: 55px;
+}

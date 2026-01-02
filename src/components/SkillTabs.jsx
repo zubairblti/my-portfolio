@@ -1,52 +1,30 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
 
 const SkillTabs = () => {
-  const [skillTab, setSkillTab] = useState('design');
 
-  const skillsDesign = [
-    { name: 'Figma', image: 'assets/images/skill/figma.png', percentage: 95 },
-    { name: 'Adobe XD', image: 'assets/images/skill/xd.png', percentage: 94 },
-    { name: 'Sketch', image: 'assets/images/skill/sketch.png', percentage: 93 },
-    { name: 'React', image: 'assets/images/skill/react.png', percentage: 95 },
-    { name: 'WordPess', image: 'assets/images/skill/wordpress.png', percentage: 94 },
-    { name: 'JavaScript', image: 'assets/images/skill/javascript.png', percentage: 99 }
+  const skills = [
+    { name: "HTML5", image: "assets/images/skill/html.png", percentage: 95 },
+    { name: "JavaScript", image: "assets/images/skill/javascript.png", percentage: 99 },
+    { name: "React", image: "assets/images/skill/react.png", percentage: 95 },
+    { name: "Php", image: "assets/images/skill/php.png", percentage: 94 },
+    { name: "Laravel", image: "assets/images/skill/laravel.png", percentage: 93 },
+    { name: "WordPress", image: "assets/images/skill/wordpress.png", percentage: 94 },
+    
   ];
 
   useEffect(() => {
-    // Initialize odometer when component mounts or tab changes
-    if (window.Odometer) {
-      const odometers = document.querySelectorAll('.skill .odometer');
-      odometers.forEach((odometer) => {
-        const finalValue = odometer.getAttribute('data-odometer-final');
-        if (finalValue && !odometer.classList.contains('odometer-done')) {
-          const od = new window.Odometer({
-            el: odometer,
-            value: 0,
-          });
-          setTimeout(() => {
-            od.update(finalValue);
-            odometer.classList.add('odometer-done');
-          }, 100);
-        }
+    if (!window.Odometer) return;
+    document.querySelectorAll(".skill .odometer").forEach((el) => {
+      const finalValue = el.getAttribute("data-odometer-final");
+      el.innerHTML = "0";
+      const od = new window.Odometer({
+        el,
+        value: 0,
       });
-    }
 
-    // Skill tab hover effect
-    const skillTabs = document.querySelectorAll('.skill__tab');
-    skillTabs.forEach((tab) => {
-      tab.addEventListener('mouseover', function () {
-        skillTabs.forEach((t) => t.classList.remove('active'));
-        this.classList.add('active');
-      });
+      setTimeout(() => od.update(finalValue), 150);
     });
-
-    return () => {
-      // Cleanup event listeners if needed
-      skillTabs.forEach((tab) => {
-        tab.removeEventListener('mouseover', () => {});
-      });
-    };
-  }, [skillTab]);
+  }, []);
 
   return (
     <section id="skills" className="skill pt-160">
@@ -55,82 +33,39 @@ const SkillTabs = () => {
           <div className="col-12">
             <div className="section__header text-center mb-60 fade-up">
               <span className="sub-title tertiary-text text-uppercase neutral-top fw-6">
-                Visit my skill & Hire me
+                My Skills & Expertise
               </span>
-              <h2 className="title-animation fw-6 mt-16">My Design Skills & Favorite Tools</h2>
+              <h2 className="title-animation fw-6 mt-16">
+                Technologies I Work With
+              </h2>
               <p className="primary-text mt-16">
-                Explore the tools and skills I use daily to craft visually stunning, functional designs.
+                A balanced skill set covering frontend, backend, and full-stack web development.
               </p>
-              <div className="skill__tab-btns mt-40">
-                <button
-                  data-target="#design"
-                  className={`skill-tab-btn ${skillTab === 'design' ? 'active' : ''}`}
-                  onClick={() => setSkillTab('design')}
-                >
-                  Design
-                </button>
-                <span></span>
-                <button
-                  data-target="#development"
-                  className={`skill-tab-btn ${skillTab === 'development' ? 'active' : ''}`}
-                  onClick={() => setSkillTab('development')}
-                >
-                  Development
-                </button>
-              </div>
             </div>
           </div>
         </div>
         <div className="row">
           <div className="col-12">
             <div className="skill__tab-wrapper fade-up">
-              <div
-                className="skill__tab-single"
-                id="design"
-                style={{ display: skillTab === 'design' ? 'block' : 'none' }}
-              >
-                <div className="skill__tab-inner">
-                  {skillsDesign.map((skill, index) => (
-                    <div key={index} className={`skill__tab text-center ${index === 2 ? 'active' : ''}`}>
-                      <div className="thumb">
-                        <img src={skill.image} alt="Image" />
-                      </div>
-                      <div className="content mt-60">
-                        <span className="text-xl text-uppercas fw-5">{skill.name}</span>
-                        <p className="primary-text text-xxl fw-6 mt-4">
-                          <span className="odometer" data-odometer-final={skill.percentage}>
-                            0
-                          </span>
-                          <span className="prefix">%</span>
-                        </p>
-                      </div>
+              <div className="skill__tab-inner">
+                {skills.map((skill, index) => (
+                  <div key={index} className="skill__tab text-center">
+                    <div className="thumb">
+                      <img src={skill.image} alt={skill.name} />
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="skill__tab-single"
-                id="development"
-                style={{ display: skillTab === 'development' ? 'block' : 'none' }}
-              >
-                <div className="skill__tab-inner">
-                  {skillsDesign.map((skill, index) => (
-                    <div key={index} className={`skill__tab text-center ${index === 2 ? 'active' : ''}`}>
-                      <div className="thumb">
-                        <img src={skill.image} alt="Image" />
-                      </div>
-                      <div className="content mt-60">
-                        <span className="text-xl text-uppercas fw-5">{skill.name}</span>
-                        <p className="primary-text text-xxl fw-6 mt-4">
-                          <span className="odometer" data-odometer-final={skill.percentage}>
-                            0
-                          </span>
-                          <span className="prefix">%</span>
-                        </p>
-                      </div>
+                    <div className="content mt-60">
+                      <span className="text-xl text-uppercase fw-5">
+                        {skill.name}
+                      </span>
+                      <p className="primary-text text-xxl fw-6 mt-4">
+                        <span className="odometer" data-odometer-final={skill.percentage}>
+                          0
+                        </span>
+                        <span className="prefix">%</span>
+                      </p>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -139,6 +74,4 @@ const SkillTabs = () => {
     </section>
   );
 };
-
 export default SkillTabs;
-
