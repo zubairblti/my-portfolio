@@ -1,63 +1,52 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 const PricingFour = () => {
-  const [pricingTab, setPricingTab] = useState('hourTwo');
-
   const pricingPlans = [
     {
-      name: 'Basic Plan',
-      price: '$15',
-      period: '/ Per Month',
+      name: 'WordPress Development',
+      price: 'Starting $180',
       features: [
-        'Need your wireframe',
-        'Your project alway be priority',
-        'Design with Figma, Framer',
-        '24 / 7 support'
+        'Custom themes & templates',
+        'Plugin integration & setup',
+        'WooCommerce eCommerce sites',
+        'Responsive & optimized'
       ]
     },
     {
-      name: 'Standard Plan',
-      price: '$45',
-      period: '/ Per Month',
+      name: 'Laravel Development',
+      price: 'Starting $350',
       features: [
-        'Need your wireframe',
-        'Your project alway be priority',
-        'Design with Figma, Framer',
-        '24 / 7 support'
+        'Custom web applications',
+        'REST API integration',
+        'Admin panel & dashboard',
+        'Secure & scalable code'
       ],
       featured: true
     },
     {
-      name: 'Premium Plan',
-      price: '$75',
-      period: '/ Per Month',
+      name: 'Support & Extras',
+      price: 'Starting $100',
       features: [
-        'Need your wireframe',
-        'Your project alway be priority',
-        'Design with Figma, Framer',
+        'Website maintenance & updates',
+        'Performance optimization & SEO',
+        'Website Design & Layout Services',
         '24 / 7 support'
       ]
     }
   ];
-
-  useEffect(() => {
-    // Initialize vanilla tilt for pricing cards
-    if (window.VanillaTilt && document.querySelectorAll('.pricing-four .van-tilt').length > 0) {
-      const vanTiltElements = document.querySelectorAll('.pricing-four .van-tilt');
-      vanTiltElements.forEach((element) => {
-        if (!element.hasAttribute('data-vanilla-tilt-initialized')) {
-          window.VanillaTilt.init(element, {
-            max: 10,
-            speed: 3000,
-          });
-          element.setAttribute('data-vanilla-tilt-initialized', 'true');
+   useEffect(() => {
+    if (window.VanillaTilt) {
+      const elements = document.querySelectorAll('.pricing-four .van-tilt');
+      elements.forEach((el) => {
+        if (!el.hasAttribute('data-vanilla-tilt-initialized')) {
+          window.VanillaTilt.init(el, { max: 10, speed: 3000 });
+          el.setAttribute('data-vanilla-tilt-initialized', 'true');
         }
       });
     }
-  }, [pricingTab]);
-
+  }, []);
   return (
-    <section id="pricing" className="pricing-four pt-160">
+    <section id="pricing" className="pricing-four">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -71,25 +60,8 @@ const PricingFour = () => {
                 </div>
                 <div className="col-12 col-sm-10 col-md-8 col-lg-4">
                   <div>
-                    <p className="primary-text">We put your ideas and thus your wishes in the form of a unique</p>
+                    <p className="primary-text">We transform your ideas into functional and scalable websites & applications.</p>
                     <div className="mt-30">
-                      <div className="pr__tab-btns">
-                        <button
-                          data-target="#hourTwo"
-                          className={`pr-tab-btn ${pricingTab === 'hourTwo' ? 'active' : ''}`}
-                          onClick={() => setPricingTab('hourTwo')}
-                        >
-                          Hourly
-                        </button>
-                        <span></span>
-                        <button
-                          data-target="#projectTwo"
-                          className={`pr-tab-btn ${pricingTab === 'projectTwo' ? 'active' : ''}`}
-                          onClick={() => setPricingTab('projectTwo')}
-                        >
-                          Project Based
-                        </button>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -100,24 +72,16 @@ const PricingFour = () => {
         <div className="row">
           <div className="col-12">
             <div className="pricing-four__inner">
-              <div
-                className="pricing-four__item"
-                id="hourTwo"
-                style={{ display: pricingTab === 'hourTwo' ? 'block' : 'none' }}
-              >
+              <div className="pricing-four__item">
                 <div className="row gutter-24">
                   {pricingPlans.map((plan, index) => (
                     <div key={index} className="col-12 col-md-6 col-lg-4">
                       <div className="van-tilt">
-                        <div
-                          className={`pricing-four__single fade-up ${plan.featured ? 'pricing-four__single-alt' : ''}`}
-                          data-delay={index * 300}
-                        >
+                        <div className={`pricing-four__single fade-up ${plan.featured ? 'pricing-four__single-alt' : ''}`} data-delay={index * 300}>
                           <div className="content">
                             <span className="text-xxl fw-6 neutral-top">{plan.name}</span>
                             <h2 className="fw-6 mt-12">
                               <span className="title-xl">{plan.price}</span>
-                              <span className="text-md primary-text fw-4"> {plan.period}</span>
                             </h2>
                           </div>
                           <div className="pricing-four__cta mt-60">
@@ -135,60 +99,7 @@ const PricingFour = () => {
                                   element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                 }
                               }
-                            }}>Get Started Now</a>
-                          </div>
-                          <div className="pricing-four__description mt-60">
-                            <ul>
-                              {plan.features.map((feature, idx) => (
-                                <li key={idx} className="primary-text">
-                                  <i className="ph ph-caret-double-right"></i>
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div
-                className="pricing-four__item"
-                id="projectTwo"
-                style={{ display: pricingTab === 'projectTwo' ? 'block' : 'none' }}
-              >
-                <div className="row gutter-24">
-                  {pricingPlans.map((plan, index) => (
-                    <div key={index} className="col-12 col-md-6 col-lg-4">
-                      <div className="van-tilt">
-                        <div
-                          className={`pricing-four__single fade-up ${plan.featured ? 'pricing-four__single-alt' : ''}`}
-                          data-delay={index * 300}
-                        >
-                          <div className="content">
-                            <span className="text-xxl fw-6 neutral-top">{plan.name}</span>
-                            <h2 className="fw-6 mt-12">
-                              <span className="title-xl">{plan.price}</span>
-                              <span className="text-md primary-text fw-4"> / Per Project</span>
-                            </h2>
-                          </div>
-                          <div className="pricing-four__cta mt-60">
-                            <a href="#contact" onClick={(e) => {
-                              e.preventDefault();
-                              const element = document.querySelector('#contact');
-                              if (element) {
-                                if (window.gsap && window.gsap.utils && window.gsap.to) {
-                                  window.gsap.to(window, {
-                                    duration: 1,
-                                    scrollTo: { y: element, offsetY: 100 },
-                                    ease: "power2.inOut"
-                                  });
-                                } else {
-                                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }
-                              }
-                            }}>Get Started Now</a>
+                            }}>Hire Me Now</a>
                           </div>
                           <div className="pricing-four__description mt-60">
                             <ul>
@@ -213,6 +124,4 @@ const PricingFour = () => {
     </section>
   );
 };
-
 export default PricingFour;
-
