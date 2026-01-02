@@ -115,7 +115,7 @@ const ContactInfo = () => {
           onClose={() => setToast(null)}
         />
       )}
-      <section id="contact" className="contact pt-160 pb-160">
+      <section id="contact" className="contact pb-160">
         <div className="container">
           <div className="row">
             <div className="col-12">

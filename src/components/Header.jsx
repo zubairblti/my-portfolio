@@ -74,7 +74,7 @@ const Header = () => {
                   <div className="navbar__options">
                     <div className="navbar__mobile-options d-none d-sm-block">
                       <a href="#contact" className="btn-primary" onClick={(e) => handleLinkClick(e, '#contact')}>
-                        <span className="btn-animated-text" data-text="contact us">Contact Us</span>
+                        <span className="btn-animated-text" data-text="contact me">Contact Me</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>
@@ -143,7 +143,7 @@ const MobileMenu = ({ isOpen, onClose, handleLinkClick }) => {
           </div>
           <div className="mobile-menu__cta d-block d-md-none nav-fade">
             <a href="#contact" className="btn-primary" onClick={(e) => { handleLinkClick(e, '#contact'); onClose(); }}>
-              <span className="btn-animated-text" data-text="contact us">Contact Us</span>
+              <span className="btn-animated-text" data-text="contact me">Contact Me</span>
               <span className="btn-icon">
                 <i className="ph ph-arrow-up-right"></i>
                 <i className="ph ph-arrow-up-right"></i>

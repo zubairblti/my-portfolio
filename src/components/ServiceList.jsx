@@ -100,7 +100,7 @@ const ServiceList = () => {
                           }
                         }
                       }}>
-                        <span className="btn-animated-text" data-text="View More">Get STARTED</span>
+                        <span className="btn-animated-text" data-text="Get STARTED">Get STARTED</span>
                         <span className="btn-icon">
                           <i className="ph ph-arrow-up-right"></i>
                           <i className="ph ph-arrow-up-right"></i>

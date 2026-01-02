@@ -99,7 +99,7 @@ const FAQ = () => {
                     }
                   }
                 }}>
-                  <span className="btn-animated-text" data-text="Contact Us">Contact Me</span>
+                  <span className="btn-animated-text" data-text="Contact Me">Contact Me</span>
                   <span className="btn-icon">
                     <i className="ph ph-arrow-up-right"></i>
                     <i className="ph ph-arrow-up-right"></i>
