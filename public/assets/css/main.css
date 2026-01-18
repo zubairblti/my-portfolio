@@ -4028,18 +4028,21 @@ span {
   justify-content: space-between;
 }
 .portfolio .portfolio__single-intro {
-  max-width: 360px;
+  max-width: 370px;
 }
-.portfolio .portfolio__single-content {
+/* .portfolio .portfolio__single-content {
   max-width: 360px;
-}
+} */
 .portfolio .portfolio__thumb {
   display: none;
+  height: 400px;
+  overflow: auto;
 }
 .portfolio .portfolio__thumb img {
   width: 100%;
   min-height: 300px;
   border-radius: 8px;
+  object-fit: cover;
 }
 .portfolio .portfolio__tags {
   display: flex;
