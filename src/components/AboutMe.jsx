@@ -6,7 +6,7 @@ const AboutMe = () => {
           <div className="col-12 col-lg-6">
             <div className="about-me__thumb">
               <div className="hero-two-thumb d-none d-md-block fade-up">
-                <img src="assets/images/about/thumb.png" alt="Zubair - Web Developer" />
+                <img src="assets/images/about/about.png" alt="Zubair - Web Developer" />
                 <span></span>
               </div>
             </div>

@@ -74,7 +74,7 @@ const Hero = () => {
                 </div>
               </div>
               <div className="hero-two-thumb d-none d-md-block fade-up" data-delay="200">
-                <img src="assets/images/banner/hero-two-thumb.png" alt="Image" />
+                <img src="assets/images/banner/banner.webp" alt="Image" />
                 <span></span>
               </div>
             </div>
