@@ -44,7 +44,7 @@ const PortfolioList = () => {
   }, []);
 
   return (
-    <section className="portfolio pt-160 scale-wrapper pb-160">
+    <section id="portfolio" className="portfolio pt-160 scale-wrapper pb-160">
       <div className="container">
         <div className="row">
           <div className="col-12">

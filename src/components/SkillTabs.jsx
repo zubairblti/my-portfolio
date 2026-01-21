@@ -3,12 +3,12 @@ import { useEffect } from "react";
 const SkillTabs = () => {
 
   const skills = [
-    { name: "HTML5", image: "assets/images/skill/html.png", percentage: 95 },
-    { name: "JavaScript", image: "assets/images/skill/javascript.png", percentage: 99 },
-    { name: "React", image: "assets/images/skill/react.png", percentage: 95 },
+    { name: "HTML5", image: "assets/images/skill/html.png", percentage: 85 },
+    { name: "JavaScript", image: "assets/images/skill/javascript.png", percentage: 80 },
+    { name: "React", image: "assets/images/skill/react.png", percentage: 45 },
     { name: "Php", image: "assets/images/skill/php.png", percentage: 94 },
-    { name: "Laravel", image: "assets/images/skill/laravel.png", percentage: 93 },
-    { name: "WordPress", image: "assets/images/skill/wordpress.png", percentage: 94 },
+    { name: "Laravel", image: "assets/images/skill/laravel.png", percentage: 90 },
+    { name: "WordPress", image: "assets/images/skill/wordpress.png", percentage: 95 },
     
   ];
 
