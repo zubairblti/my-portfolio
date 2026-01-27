@@ -22,7 +22,7 @@ const Hero = () => {
                         <a href="#contact" className="btn--secondary" title="hire me" aria-label="hire me">
                           <span className="btn-animated-text" data-text="Hire Me!">Hire Me!</span>
                         </a>
-                        <a href="/public/Muhammad-Zubair.pdf" target="_blank" className="btn--tertiary" title="download cv" aria-label="download cv">
+                        <a href="/Muhammad-Zubair.pdf" target="_blank" className="btn--tertiary" title="download cv" aria-label="download cv">
                           <span className="btn-animated-text" data-text="Download CV">Download CV</span>
                         </a>
                       </div>
