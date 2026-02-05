@@ -122,7 +122,7 @@ const Footer = () => {
               <div className="footer__copyright-left">
                 <p>
                   <i className="ph ph-copyright"></i> <span id="copyrightYear"></span>{' '}
-                  <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/" onClick={(e) => {
+                  <a href="https://www.linkedin.com/in/zubair-blti-286005241/" onClick={(e) => {
                     e.preventDefault();
                     const element = document.querySelector('#home');
                     if (element) {
@@ -142,7 +142,7 @@ const Footer = () => {
             </div>
             <div className="col-12 col-lg-4">
               <div className="social justify-content-center">
-                <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/" target="_blank" rel="noopener noreferrer" aria-label="share us on linkedin" title="linkedin">
+                <a href="https://www.linkedin.com/in/zubair-blti-286005241/" target="_blank" rel="noopener noreferrer" aria-label="share us on linkedin" title="linkedin">
                   <i className="fa-brands fa-linkedin"></i>
                 </a>                
                 <a href="https://www.facebook.com/profile.php?id=61565782182572" target="_blank" rel="noopener noreferrer" aria-label="share us on Facebook" title="Facebook">
@@ -158,7 +158,7 @@ const Footer = () => {
             </div>
             <div className="col-12 col-lg-4">
               <div className="footer__copyright-right">
-                <p>Designed By <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/">Zubair Blti</a></p>
+                <p>Designed By <a href="https://www.linkedin.com/in/zubair-blti-286005241/">Zubair Blti</a></p>
               </div>
             </div>
           </div>

@@ -188,7 +188,7 @@ const MobileMenu = ({ isOpen, onClose, handleLinkClick }) => {
             </a>
           </div>
           <div className="mobile-menu__social social nav-fade">
-            <a href="https://www.linkedin.com/in/zubair-blti-%E2%9C%85-286005241/" target="_blank" aria-label="share us on linkedin" title="linkedin">
+            <a href="https://www.linkedin.com/in/zubair-blti-286005241/" target="_blank" aria-label="share us on linkedin" title="linkedin">
               <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61565782182572" target="_blank" aria-label="share us on Facebook" title="Facebook">
